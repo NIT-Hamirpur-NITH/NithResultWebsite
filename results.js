@@ -18,7 +18,7 @@ var getMarksQueue = async.queue(function(i,callback){
 		rejectUnauthorized: false,
 		host: '14.139.56.15',
 	    port: 443,
-	   	path: '/scheme11/studentresult/details.asp',
+	   	path: '/scheme14/studentresult/details.asp',
 	    method: 'POST',
 	    headers: {
 	   		'Content-Type': 'application/x-www-form-urlencoded',
@@ -91,6 +91,8 @@ var getMarksQueue = async.queue(function(i,callback){
 				}
 				else if(dept == '6'){
 					dept = 'ARCH';
+				} else if(dept == '7'){
+					dept = 'CHD';
 				}
 
 
@@ -106,7 +108,7 @@ var getMarksQueue = async.queue(function(i,callback){
 						name : name,
 						rollNumber : rollnumber,
 						dept : dept,
-						scheme: "12",
+						scheme: "13",
 						cgpi : cgpi[k-1],
 						sgpi : sgpi[8],
 						sgpi7 : sgpi[7],
@@ -155,7 +157,7 @@ getMarksQueue.drain = function(){
 };
 
 var init = function(){
-	for(i=11101; i<=11699; i++){
+	for(i=14101; i<=14799; i++){
 		getMarksQueue.push(i);
 	}
 }
