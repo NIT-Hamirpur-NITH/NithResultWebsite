@@ -1,0 +1,31 @@
+
+.text-my {
+  color: #12fcff;
+  }
+.text-comp {
+  color: #e5eaee;
+  }
+  .text-mech {
+  color: #f7d978;
+  }
+  .carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  
+}
+
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-caption p {
+  margin-bottom:430px;
+}
