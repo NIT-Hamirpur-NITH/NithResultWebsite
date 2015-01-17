@@ -5,6 +5,18 @@
 <link rel="stylesheet" href="css/bootstrap-responsive.css" />
 <link rel="stylesheet" href="css/custom.css" />
 
+<style>
+
+.rank {
+	font-size: 22px;
+	padding:100px;
+	width:90%;
+	text-align:center;
+}
+
+</style>
+
+
 <div class="row">
 	<div class="span10 offset1">
 		<div class="navbar">

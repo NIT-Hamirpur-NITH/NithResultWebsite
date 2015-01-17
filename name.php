@@ -62,13 +62,31 @@
 //  we gonna finish the rest at the end
 ?>
 
-<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<style>
+
+.rank {
+	font-size:20px;
+	font-family : Open Sans;
+	padding:5px;
+	position: relative;
+	display: block;
+	width:90%;
+	text-align:center;
+	border-radius: 5px;
+	box-shadow:1px 1px 2px black;
+	background:#EFF2EF;
+	color:#777;
+	font-family:Lobster, cursive;
+}
+
+</style>
 
 <div class="row">
-	<div class="span8 offset1">
-	<p><?php echo "College Rank ".$collegeRank ;?></p>
-	<p><?php echo "Year Rank ".$yearRank ;?></p>
-	<p><?php echo "Class Rank ".$classRank ;?></p>
+	<div class="span10 offset1">
+	<div class="span3"><span class='rank'><?php echo "College Rank ".$collegeRank ;?></span></div>
+	<div class="span3"><span class='rank'><?php echo "Year Rank ".$yearRank ;?></span></div>
+	<div class="span3"><span class='rank'><?php echo "Class Rank ".$classRank ;?></span></div>
 	</div>
 </div>
 

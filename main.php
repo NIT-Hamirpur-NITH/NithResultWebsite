@@ -6,7 +6,7 @@
 	// 		document.forms[2][0].value
 	// 	})
 
-	// }) 
+	// })
  	function displayForm() {
  		var x = document.forms[2][0].value;
  		if (x == "class") {
@@ -14,7 +14,7 @@
  			$('#deptForm').attr('style','display:none');
    	 		$('#yearForm').attr('style','display:block');
         	$('#deptForm').attr('style','display:block');
-        	
+
    		}
       	if (x == "year") {
       		$('#yearForm').attr('style','display:none')
@@ -30,7 +30,7 @@
      		$('#yearForm').attr('style','display:none')
  			$('#deptForm').attr('style','display:none');
      	}
-   	 
+
 	}
 
 </script>
@@ -46,6 +46,7 @@
 
 <head>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 
 	<body>
@@ -63,26 +64,26 @@
 			?>
 			</br></br>
 		</div>
-		
+
 			<div class="row">
 
 				<div class="span9 offset1">
 
-					<p class="container text-error">
-						A more interactive based result .
-						Find result easiy by name,rollno. as well as by ranking.</br>
-						Also comment and like feature on everyones result page</br> 
-						Check out your result again!</br>
-					</p>
+					<div class="container span9 list-group-item-success" style="color:#777; font-family:Lobster, cursive; padding: 20px; border-radius: 5px;
+					 box-shadow:1px 1px 2px black; font-size:15px; margin-bottom:20px; text-align:justify; background:#EFF2EF;">
+						A more interactive result. Find result easiy by name, roll number as well as ranking.
+						With comment and like feature on everyones result page.
+						Check out your result again!
+					</div>
 
 					<!-- Search by name -->
-					<form class="well form-search" action="name.php" method="POST">
+					<form class="well form-search span9" style="margin-left:0px" action="name.php" method="POST">
 						<!-- <input type = "text" name="scheme" id="schemeName" />
 						<input type = "text" name="dept" id="deptName" /> -->
-						<h3 class="text-info">Search by Name </h3>
-						<blockquote class="text-error">Definitely , the easiest way to search anything.</blockquote>
+						<h3 class="text-info" style="font-family:Lobster">Search by Name </h3>
+						<blockquote style="color:#666;">Definitely , the easiest way to search anything.</blockquote>
 						<div class="form-group">
-							<label class="text-info"for="sel1">Year: </label>
+							<label class="text-info" for="sel1">Year: </label>
 							<select class="form-control" id="schemeName" name="scheme" required>
 							    <option value="">Choose your year: </option>
 							    <option value=11>Final Year</option>
@@ -92,7 +93,7 @@
 							</select>
 						</div>
 						</br>
-										
+
 						<div class="form-group">
 							<label class="text-info" for="sel1"> Department : </label>
 							<select class="form-control" id="deptName" name="dept" required>
@@ -105,9 +106,9 @@
 							  	<option value="ARCH">Architecture</option>
 							  	<option value="EEE">Electronics & Comm.</option>
 							</select>
-						</div> 
+						</div>
 						</br>
-						
+
 						<input type="text" name="student" class="span6 search-query" placeholder="Search by name ...." list="nameList" required>
 							<datalist id="nameList">
 								<!-- data to be fetched with ajax -->
@@ -117,27 +118,28 @@
 					</form>
 
 					<!-- Search by Roll Number -->
-					<form class="well form-search"  action="rollno.php" method="GET">
-						<h3 class="text-info">Search by Roll Number </h3>
-						<blockquote class="text-error"> The Old School Boring Way</blockquote>
+					<form class="well form-search span9" style="margin-left:0px" action="rollno.php" method="GET">
+						<h3 class="text-info" style="font-family:Lobster">Search by Roll Number </h3>
+						<blockquote style="color:#666;"> The Old School Boring Way</blockquote>
 						<input type="text" name="roll" class="span6 search-query" placeholder="Search by Rollno."required></input>
 						<button class="btn btn-info "> Search </button>
 					</form>
+
 					<!-- Search by Ranking -->
-					<form class="well form-search" action="ranking.php" method="POST">
-						<h3 class="text-info">Search by Rank</h3>
-						<blockquote class="text-error">Wow! A new thing.Take a look of where do you stand in your class , branch , year and in the whole college </blockquote>
+					<form class="well form-search span9" style="margin-left:0px" action="ranking.php" method="POST">
+						<h3 class="text-info" style="font-family:Lobster">Search by Rank</h3>
+						<blockquote style="color:#666;">Wow! A new thing.Take a look of where do you stand in your class , branch , year and in the whole college </blockquote>
 						<div class="form-group">
-							<label for="sel1">Ranking by:</label>
+							<label for="sel1" class="text-info">Ranking by:</label>
 							<select class="form-control" id="rankSort" name="rankSort" onchange ="displayForm()" required>
 								<option value="">Choose</option>
 							    <option value="class">Class</option>
 							    <option value="year">Year</option>
-							    <option value="college" >College</option>	    
+							    <option value="college" >College</option>
 							  	<option value="branch">Branch</option>
 							</select>
 						</div>
-						
+
 						<div id = 'yearForm' style="display:none;" class="form-group">
 						<br>
 						<label class="text-info"for="sel1">Year: </label>
@@ -150,7 +152,7 @@
 							</select>
 						</br>
 						</div>
-						
+
 						<div class="form-group" id = 'deptForm' style="display:none;" >
 							</br>
 							<label class="text-info" for="sel1"> Department : </label>
@@ -165,8 +167,8 @@
 							  	<option value="EEE">Electronics & Comm.</option>
 							  	<option value ="ECE"> ECE </option>>
 							</select>
-							  
-						</div>	
+
+						</div>
 						</br>
 						<input type="text" name="rank" class="span6 search-query" placeholder="Search by Ranking...." required></input>
 						<button class="btn btn-info"> Search </button>
@@ -183,12 +185,12 @@
 			<div class="row ">
 				<?php require 'includes/middle.php' ?>
 			</div>
-				
+
 			<div class="row" style="background: #999999; margin-top:20px;">
 				<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE</h5>
 			</div>
-		
-		
+
+
 		<!--  the facebook widget -->
 		<script>
 			(function(d, s, id) {
