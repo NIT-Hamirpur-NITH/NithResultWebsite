@@ -11,13 +11,16 @@
 		$rank = 1;
 	}
 
-	if($rankSort == 'BRANCH') {
+	if($rankSort == 'class') {
 		$branch = $_POST['dept'];
 		$scheme = $_POST['scheme'];
 		$query= "SELECT count(*) as total from marks where dept = '$branch' && scheme = '$scheme'";
-	} else if ($rankSort == 'YEAR') {
+	} else if ($rankSort == 'year') {
 		$scheme = $_POST['scheme'];
 		$query= "SELECT count(*) as total from marks where scheme = '$scheme'";
+	} else if ($rankSort == 'branch') {
+		$branch = $_POST['dept'];
+		$query= "SELECT count(*) as total from marks where dept = '$branch'";
 	} else {
 		$query= "SELECT count(*) as total from marks";
 	}
@@ -30,13 +33,16 @@
 
 		if(!($rank > $total || $rank <= 0)) {
 			$trank = $rank;
-			if($rankSort == 'BRANCH') {
+			if($rankSort == 'class') {
 				$branch = $_POST['dept'];
 				$scheme = $_POST['scheme'];
 				$pointers = $conn->query("SELECT rollNumber from marks where dept = '$branch' && scheme = '$scheme' order by cgpi desc") or die(mysqli_error($conn));
-			} else if ($rankSort == 'YEAR') {
+			} else if ($rankSort == 'year') {
 				$scheme = $_POST['scheme'];
 				$pointers = $conn->query("SELECT rollNumber from marks where scheme = '$scheme' order by cgpi desc") or die(mysqli_error($conn));
+			} else if ($rankSort == 'branch') {
+				$branch = $_POST['dept'];
+				$pointers = $conn->query("SELECT rollNumber from marks where dept = '$branch' order by cgpi desc") or die(mysqli_error($conn));
 			} else {
 				$pointers = $conn->query("SELECT rollNumber from marks order by cgpi desc") or die(mysqli_error($conn));
 			}
