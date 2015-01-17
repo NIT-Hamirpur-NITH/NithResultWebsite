@@ -22,13 +22,11 @@
 		var data = {
 			"roll" : commentTo
 		}
-		if(commentTo !== "") {
-			$.post("fetch_comment.php", data, function(returnedData) {
-				var comments = document.getElementById("comments")
-				comments.id = "comments";
-				comments.innerHTML = returnedData;
-			});
-		}
+		$.post("fetch_comment.php", data, function(returnedData) {
+			var comments = document.getElementById("comments")
+			comments.id = "comments";
+			comments.innerHTML = returnedData;
+		});
 	}
 
 	function needToAddComment(event) {

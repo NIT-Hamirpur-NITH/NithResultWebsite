@@ -10,11 +10,10 @@
     if($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
 		echo "<div class='row container'>";
-			echo "<div class='span7 well'>";	
+			echo "<div class='span7 well'>";
 				echo "<p><strong>".$row["commenter"]."</strong></p>";
 				echo "<p>".$row["comment"]."</p>";
 				echo "</br>";
-					
 			echo "</div>";
 		echo "</div>"	;
       }

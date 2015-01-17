@@ -19,27 +19,57 @@
 		$pointers = $conn->query("SELECT * from marks where rollNumber = $rollNo") or die(mysqli_error($conn));
 		if($pointers->num_rows > 0) {
 			while($row = $pointers->fetch_assoc()) {
+				$scheme = $row['scheme'];
+				$dept = $row['dept'];
 				$sem1 = $row["sgpi1"];
 				$sem2 = $row["sgpi2"];
 				$sem3 = $row["sgpi3"];
 				$sem4 = $row["sgpi4"];
 				$sem5 = $row["sgpi5"];
+				$sem6 = $row["sgpi6"];
+				$sem7 = $row["sgpi7"];
+				$sem8 = $row["sgpi8"];
+				$sem9 = $row["sgpi9"];
+				$sem10 = $row["sgpi10"];
 				$cgpi = $row["cgpi"];
 			}
 		}
 		$nr = $conn->query("SELECT rollNumber from marks order by cgpi desc");
-		$rank = 0;
+		$collegeRank = 0;
 		while($row = $nr->fetch_assoc()) {
 			// print_r($row);
-			$rank++;
+			$collegeRank++;
 			if($rollNo == $row["rollNumber"])
 				break;
 		}
-		echo "<h1> Your rank is $rank </h1>";
-// We gonna finsh it off in the wnd
+		$nr = $conn->query("SELECT rollNumber from marks where scheme = '$scheme' order by cgpi desc");
+		$yearRank = 0;
+		while($row = $nr->fetch_assoc()) {
+			// print_r($row);
+			$yearRank++;
+			if($rollNo == $row["rollNumber"])
+				break;
+		}
+		$nr = $conn->query("SELECT rollNumber from marks where scheme = '$scheme' && dept='$dept' order by cgpi desc");
+		$classRank = 0;
+		while($row = $nr->fetch_assoc()) {
+			// print_r($row);
+			$classRank++;
+			if($rollNo == $row["rollNumber"])
+				break;
+		}
+//  we gonna finish the rest at the end
 ?>
 
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+
+<div class="row">
+	<div class="span8 offset1">
+	<p><?php echo "College Rank ".$collegeRank ;?></p>
+	<p><?php echo "Year Rank ".$yearRank ;?></p>
+	<p><?php echo "Class Rank ".$classRank ;?></p>
+	</div>
+</div>
 
 <div class="row">
 	<!-- result -->
@@ -47,51 +77,94 @@
 		<table class="table table-striped span10">
 			<div class="container">
 				<table class="table table-striped table-hover table-bordered">
-					<tr class="info">
-						<td>#1</td>
+
+					<tr>
 						<td> NAME</td>
 						<td> <?php echo $name ?></td>
 					</tr>
+
 					<tr>
-						<td>#2</td>
-						<td>ROLL NO.</td>
+						<td>ROLLNO</td>
 						<td id="comment_to"> <?php echo $rollNo ?></td>
 					</tr>
-					<tr class="info">
-						<td>#3</td>
-						<td>SGPI-1</td>
+
+					<?php if($sem1 != -1) {	?>
+					<tr>
+						<td>Sem 1 (SGPI01)</td>
 						<td> <?php echo $sem1 ?></td>
 					</tr>
+					<?php } ?>
+
+					<?php if($sem2 != -1) {	?>
 					<tr>
-						<td>#4</td>
-						<td>SGPI-2</td>
+						<td>Sem 2 (SGPI02)</td>
 						<td> <?php echo $sem2 ?></td>
 					</tr>
-					<tr class="info">
-						<td>#5</td>
-						<td>SGPI-3</td>
+					<?php } ?>
+
+					<?php if($sem3 != -1) {	?>
+					<tr>
+						<td>Sem 3 (SGPI03)</td>
 						<td> <?php echo $sem3 ?></td>
 					</tr>
+					<?php } ?>
+
+					<?php if($sem4 != -1) {	?>
 					<tr>
-						<td>#6</td>
-						<td>SGPI-4</td>
+						<td>Sem 4 (SGPI04)</td>
 						<td> <?php echo $sem4 ?></td>
 					</tr>
+					<?php } ?>
+
+					<?php if($sem4 != -1) {	?>
 					<tr>
-						<td>#7</td>
-						<td>SGPI-5</td>
+						<td>Sem 4 (SGPI04)</td>
+						<td> <?php echo $sem4 ?></td>
+					</tr>
+					<?php } ?>
+
+					<?php if($sem5 != -1) {	?>
+					<tr>
+						<td>Sem 5 (SGPI05)</td>
 						<td> <?php echo $sem5 ?></td>
 					</tr>
-					<tr class="info">
-						<td>#8</td>
-						<td>CGPI</td>
-						<td><?php echo $cgpi ?></td>
+					<?php } ?>
+
+					<?php if($sem6 != -1) {	?>
+					<tr>
+						<td>Sem 6 (SGPI06)</td>
+						<td> <?php echo $sem6 ?></td>
 					</tr>
+					<?php } ?>
+
+					<?php if($sem7 != -1) {	?>
+					<tr>
+						<td>Sem 7 (SGPI07)</td>
+						<td> <?php echo $sem7 ?></td>
+					</tr>
+					<?php } ?>
+
+					<?php if($sem8 != -1) {	?>
+					<tr>
+						<td>Sem 8 (SGPI08)</td>
+						<td> <?php echo $sem8 ?></td>
+					</tr>
+					<?php } ?>
+
+					<?php if($cgpi != -1) {	?>
+					<tr>
+						<td>Commulative (CGPI)</td>
+						<td> <?php echo $cgpi ?></td>
+					</tr>
+					<?php } ?>
+
 				</table>
 			</div>
 		</table>
 	</div>
 </div>
+
+<?php include_once "supply_box.php" ?>
 
 <div class="row">
 	<div class="span8 offset1">

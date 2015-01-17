@@ -33,17 +33,11 @@
 
 			<!-- Search by name -->
 			<form class="well form-search" action="name.php" method="POST">
-				<input type="text" name="student" class="span6 search-query" placeholder="Search by name ...." list="name">
-					<datalist id="name">
-						<?php
-							// connect to the database
-							include_once "includes/conf.inc.php";
-							// fetch the names
-							$result = $conn->query("SELECT * FROM marks") or die(mysqli_error($conn));
-							while($row = $result->fetch_assoc()) {
-								echo "<option value='$row[name]'>";
-							}
-						?>
+				<input type = "text" name="scheme" id="schemeName" />
+				<input type = "text" name="dept" id="deptName" />
+				<input type="text" name="student" class="span6 search-query" placeholder="Search by name ...." list="nameList">
+					<datalist id="nameList">
+						<!-- data to be fetched with ajax -->
 					</datalist>
 				</input>
 				<button class="btn btn-info"> Search </button>
@@ -56,6 +50,9 @@
 			</form>
 			<!-- Search by Ranking -->
 			<form class="well form-search" action="ranking.php" method="POST">
+				<input type="text" name="rankSort" />
+				<input type="text" name="scheme" />
+				<input type="text" name="dept" />
 				<input type="text" name="rank" class="span6 search-query" placeholder="Search by Ranking...."></input>
 				<button class="btn btn-info"> Search </button>
 			</form>
@@ -71,6 +68,7 @@
 		<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE</h5>
 	</div>
 
+	<!--  the facebook widget -->
 	<script>
 		(function(d, s, id) {
 	  	var js, fjs = d.getElementsByTagName(s)[0];
@@ -79,6 +77,36 @@
 	  	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 	  	fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<!-- include jquery as we need it -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- fetch the names using ajax -->
+	<script type="text/javascript">
+
+		document.body.onload = function() {
+			var deptName = document.getElementById("deptName");
+			var schemeName = document.getElementById("schemeName");
+			deptName.addEventListener('change', fetchName);
+			schemeName.addEventListener('change', fetchName);
+		}
+
+		function fetchName() {
+			console.log('fetching names');
+			var schemeName = document.getElementById("schemeName").value.trim();
+			var deptName = document.getElementById("deptName").value.trim();
+			var data = {
+				"scheme" : schemeName,
+				"dept" : deptName
+			};
+
+			$.post("autoname.php", data, function(returnedData) {
+				var nameList = document.getElementById("nameList");
+				nameList.innerHTML = returnedData;
+				console.log(returnedData);
+			});
+		}
 	</script>
 
 </body>

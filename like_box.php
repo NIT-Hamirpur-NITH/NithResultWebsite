@@ -7,11 +7,9 @@
     var data = {
       "roll" : commentTo
     }
-    if(commentTo !== "") {
-      $.post("fetch_likes.php", data, function(returnedData) {
-        likes.innerHTML = returnedData;
-      });
-    }
+    $.post("fetch_likes.php", data, function(returnedData) {
+      likes.innerHTML = returnedData;
+    });
   }
 
   function needToAddLike() {
