@@ -41,9 +41,9 @@
 			}
 			$.post("add_commnet.php", data, function(returnedData) {
 				console.log(returnedData);
+				showComment();
 			});
 		}
-		showComment();
 		showComment();
 	}
 </script>

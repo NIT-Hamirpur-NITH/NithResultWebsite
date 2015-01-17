@@ -20,9 +20,9 @@
     if(commentTo !== "") {
       $.post("add_likes.php", data, function(returnedData) {
         console.log(returnedData);
+        showLikes();
       });
     }
-    showLikes();
     showLikes();
   }
 </script>
