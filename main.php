@@ -82,6 +82,7 @@
 						<input type = "text" name="dept" id="deptName" /> -->
 						<h3 class="text-info" style="font-family:Lobster">Search by Name </h3>
 						<blockquote style="color:#666;">Definitely , the easiest way to search anything.</blockquote>
+						<hr />
 						<div class="form-group">
 							<label class="text-info" for="sel1">Year: </label>
 							<select class="form-control" id="schemeName" name="scheme" required>
@@ -120,7 +121,8 @@
 					<!-- Search by Roll Number -->
 					<form class="well form-search span9" style="margin-left:0px" action="rollno.php" method="GET">
 						<h3 class="text-info" style="font-family:Lobster">Search by Roll Number </h3>
-						<blockquote style="color:#666;"> The Old School Boring Way</blockquote>
+						<blockquote style="color:#666;"> The old School Boring Way</blockquote>
+						<hr />
 						<input type="text" name="roll" class="span6 search-query" placeholder="Search by Rollno."required></input>
 						<button class="btn btn-info "> Search </button>
 					</form>
@@ -128,7 +130,8 @@
 					<!-- Search by Ranking -->
 					<form class="well form-search span9" style="margin-left:0px" action="ranking.php" method="POST">
 						<h3 class="text-info" style="font-family:Lobster">Search by Rank</h3>
-						<blockquote style="color:#666;">Wow! A new thing.Take a look of where do you stand in your class , branch , year and in the whole college </blockquote>
+						<blockquote style="color:#666;">Wow! A new thing. Take a look of where do you stand in your class, branch, year and in the whole college </blockquote>
+						<hr />
 						<div class="form-group">
 							<label for="sel1" class="text-info">Ranking by:</label>
 							<select class="form-control" id="rankSort" name="rankSort" onchange ="displayForm()" required>
