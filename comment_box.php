@@ -3,19 +3,30 @@
 
 <div class="row">
 	<div class="span8 offset1">
-		<h3 class="text-info">Comment here...	</h3 >
+		<h3 class="text-info">Comments</h3 >
+
 	</div>
 </div>
+
 
 <div class="row">
 	<div class="span8 offset1" id="comment_box">
-		<div id="comments"></div>
-		<input type="text" id="commenter" class="input-medium" name="from" value="Your name here...."> </input></br>
-		<textarea id="comment" name="comment" cols="25000" rows="3">Write your message here....</textarea></br>
-		<button class="btn btn-info" id="add_comment">Submit</button>
+	
+		<form class="form-inline">
+				
+			<input type="text" id="commenter" class="span7 form-search" name="from" placeholder="Name" required> </input></br>
+			<br/>
+			<textarea class="span7" id="comment" name="comment" cols="" rows="5" placeholder="Comment" required></textarea></br>
+			<br/>
+			<button class="btn btn-info" id="add_comment">Submit</button>
+		</form>
 	</div>
 </div>
-
+<div class="row">
+	<div class="span8 offset1">
+		<div id="comments"></div>
+	</div>
+</div>
 <script>
 
 	function showComment() {
