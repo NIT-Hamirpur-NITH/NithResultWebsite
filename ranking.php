@@ -122,8 +122,8 @@
 			<div class="container">
 				<table class="table table-striped table-hover table-bordered">
 
-					<tr>
-						<td> Name</td>
+					<tr class="info">
+						<td > Name</td>
 						<td> <?php echo $name ?></td>
 					</tr>
 
@@ -133,64 +133,64 @@
 					</tr>
 
 					<?php if($sem1 != -1) {	?>
-					<tr>
-						<td>Semester 1 (SGPI01)</td>
+					<tr class="info">
+						<td>SGPI 1</td>
 						<td> <?php echo $sem1 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem2 != -1) {	?>
 					<tr>
-						<td>Semester 2 (SGPI02)</td>
+						<td>SGPI 2</td>
 						<td> <?php echo $sem2 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem3 != -1) {	?>
-					<tr>
-						<td>Semester 3 (SGPI03)</td>
+					<tr class="info">
+						<td>SGPI 3</td>
 						<td> <?php echo $sem3 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem4 != -1) {	?>
 					<tr>
-						<td>Semester 4 (SGPI04)</td>
+						<td>SGPI 4</td>
 						<td> <?php echo $sem4 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem5 != -1) {	?>
-					<tr>
-						<td>Semester 5 (SGPI05)</td>
+					<tr class="info">
+						<td>SGPI 5</td>
 						<td> <?php echo $sem5 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem6 != -1) {	?>
 					<tr>
-						<td>Semester 6 (SGPI06)</td>
+						<td>SGPI 6</td>
 						<td> <?php echo $sem6 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem7 != -1) {	?>
-					<tr>
-						<td>Semester 7 (SGPI07)</td>
+					<tr class="info">
+						<td>SGPI 7</td>
 						<td> <?php echo $sem7 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem8 != -1) {	?>
 					<tr>
-						<td>Semester 8 (SGPI08)</td>
+						<td>SGPI 8</td>
 						<td> <?php echo $sem8 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($cgpi != -1) {	?>
-					<tr>
-						<td>Commulative (CGPI)</td>
+					<tr >
+						<td>CGPI</td>
 						<td> <?php echo $cgpi ?></td>
 					</tr>
 					<?php } ?>

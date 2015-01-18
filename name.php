@@ -77,7 +77,7 @@
 			<div class="container">
 				<table class="table table-striped table-hover table-bordered">
 
-					<tr>
+					<tr class="info">
 						<td> Name</td>
 						<td> <?php echo $name ?></td>
 					</tr>
@@ -88,7 +88,7 @@
 					</tr>
 
 					<?php if($sem1 != -1) {	?>
-					<tr>
+					<tr class="info">
 						<td>SGPI 1</td>
 						<td> <?php echo $sem1 ?></td>
 					</tr>
@@ -102,7 +102,7 @@
 					<?php } ?>
 
 					<?php if($sem3 != -1) {	?>
-					<tr>
+					<tr class="info"> 
 						<td>SGPI 3</td>
 						<td> <?php echo $sem3 ?></td>
 					</tr>
@@ -116,7 +116,7 @@
 					<?php } ?>
 
 					<?php if($sem5 != -1) {	?>
-					<tr>
+					<tr class="info">
 						<td>SGPI 5</td>
 						<td> <?php echo $sem5 ?></td>
 					</tr>
@@ -130,7 +130,7 @@
 					<?php } ?>
 
 					<?php if($sem7 != -1) {	?>
-					<tr>
+					<tr class="info">
 						<td>SGPI 7</td>
 						<td> <?php echo $sem7 ?></td>
 					</tr>
@@ -144,7 +144,7 @@
 					<?php } ?>
 
 					<?php if($cgpi != -1) {	?>
-					<tr>
+					<tr >
 						<td>CGPI</td>
 						<td> <?php echo $cgpi ?></td>
 					</tr>
