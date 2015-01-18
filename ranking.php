@@ -245,7 +245,7 @@
 </div>
 
 <script type="text/javascript">
-	document.body.onload = function() {
+	window.onload = function() {
 		showComment();
 		var addComment = document.getElementById("add_comment");
 		addComment.addEventListener("click", needToAddComment);
