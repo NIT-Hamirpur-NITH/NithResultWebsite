@@ -2,15 +2,11 @@
 <html>
 
 <head>
-	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/mycustom.css" />
 </head>
 
 <body>
-
 
 	<!-- Including the tile on main page -->
 	<?php
@@ -156,7 +152,6 @@
 
 	<script type="text/javascript">
 		window.onload = function() {
-			console.log('What');
 			var deptName = document.getElementById("deptName");
 			var schemeName = document.getElementById("schemeName");
 			deptName.addEventListener('change', fetchName);
@@ -202,49 +197,33 @@
 					branchRank.setAttribute('required', true);
 					$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
- 	 			$('#yearForm').attr('style','display:block');
-      	$('#deptForm').attr('style','display:block');
-			} else if (x == "year") {
-				schemeRank.setAttribute('required', true);
+ 	 				$('#yearForm').attr('style','display:block');
+			      	$('#deptForm').attr('style','display:block');
+				} 
+				else if (x == "year") {
+					schemeRank.setAttribute('required', true);
 					branchRank.removeAttribute('required');
-    		$('#yearForm').attr('style','display:none')
+			    	$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
- 	 			$('#yearForm').attr('style','display:block');
-      } else if (x == "branch") {
-      	schemeRank.removeAttribute('required');
+			 	 	$('#yearForm').attr('style','display:block');
+			     } 
+			     else if (x == "branch") {
+			      	schemeRank.removeAttribute('required');
 					branchRank.setAttribute('required', true);
- 	 			$('#yearForm').attr('style','display:none')
+			 	 	$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
-      	$('#deptForm').attr('style','display:block');
-   		} else {
-   			branchRank.removeAttribute('required');
-   			schemeRank.removeAttribute('required');
-   			$('#yearForm').attr('style','display:none')
+			      	$('#deptForm').attr('style','display:block');
+		   		} 
+		   		else {
+		   			branchRank.removeAttribute('required');
+		   			schemeRank.removeAttribute('required');
+		   			$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
-   		}
-   	}
+			   		}
+			   	}
 
-	</script>
-
-	<!--  the facebook widget -->
-	<script>
-		(function(d, s, id) {
-	  	var js, fjs = d.getElementsByTagName(s)[0];
-	  	if (d.getElementById(id)) return;
-	  	js = d.createElement(s); js.id = id;
-	  	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  	fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
 </body>
 
 </html>
-<script type="text/javascript">stLight.options({publisher: "022466ca-4c5b-468b-b9b6-a1ac9338ecc4", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script>
-	var options={ "publisher": "022466ca-4c5b-468b-b9b6-a1ac9338ecc4", "logo": { "visible": false, "url": "", "img": "http://sd.sharethis.com/disc/images/demo_logo.png", "height": 45}, "ad": { "visible": false, "openDelay": "5", "closeDelay": "0"}, "livestream": { "domain": "", "type": "sharethis", "customColors": { "widgetBackgroundColor": "#FFFFFF", "articleLinkColor": "#006fbb"}}, "ticker": { "visible": false, "domain": "", "title": "", "type": "sharethis", "customColors": { "widgetBackgroundColor": "#1d4161", "articleLinkColor": "#FFFFFF"}}, "facebook": { "visible": false, "profile": "sharethis"}, "fblike": { "visible": false, "url": ""}, "twitter": { "visible": false, "user": "sharethis"}, "twfollow": { "visible": false}, "custom": [{ "visible": false, "title": "Custom 1", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": false, "title": "Custom 2", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": false, "title": "Custom 3", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}], "chicklets": { "items": ["facebook", "twitter", "email", "sharethis", "wordpress", "stumbleupon"]}, "background": "#558aca", "color": "#2150a5", "arrowStyle": "light"};
-	var st_bar_widget = new sharethis.widgets.sharebar(options);
-</script>
-
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54baba3e3f6d48c3" async="async"></script> -->
