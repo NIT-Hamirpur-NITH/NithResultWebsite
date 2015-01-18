@@ -13,25 +13,25 @@
 					<li><a href="main.php" >
 						<div class="text-info">Home</div></a>
 					</li>
-					<li class="divider-vertical"></li>
+					<!-- <li class="divider-vertical"></li>
 					<li>
 						<a href="#"><div class="text-info">Downloads</div></a>
-					</li>
+					 --></li>
 					<li class="divider-vertical"></li>
 					<li>
 						<a href="#my-modal"  id="my-button"><div class="text-info">Why this?</div></a>
 					</li>
 					<li class="divider-vertical"></li>
 					<li>
-						<a href="#my-modal2" id="my-button2"><div class="text-info">About this?</div></a>
+						<a href="#my-modal2" id="my-button2"><div class="text-info">Technology Stack</div></a>
 					</li>
 					<li>
-						<a href="#my-modal3" id="my-button3"><div class="text-info">Work with me</div></a>
+						<a href="#my-modal3" id="my-button3"><div class="text-info">Work with us</div></a>
 					</li>
 				</ul>
 			</div>
 		</div>
-
+		<br/>
 		<!-- modal-1 why this? -->
 		<div class="modal hide fade" id="my-modal">
 			<div class="modal-header">
@@ -40,11 +40,8 @@
 			</div>
 			<div class="modal-body lead">
 				<p>
-					I had learnt some of the basics of php and mysql during the summer
-					vacations so thought of applying my skills and getting my hand rough
-					so what was better than practising my skills on our very own results
-					database , as mysql is all about database i did not have any better idea
-					than by showing the results the better way.
+					The result portal of NITH looks very dull . Also there is no 
+					way to find out a person by name . So we build this , just for fun . 
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -56,12 +53,13 @@
 		<div class="modal hide fade" id="my-modal2">
 			<div class="modal-header">
 				<button class="close" data-dismiss="modal">&times;</button>
-				<h1 class="text-center text-error">About this?</h1>
+				<h1 class="text-center text-error">Technology Stack</h1>
 			</div>
 			<div class="modal-body lead">
 				<p>
-					The design of this website is created with Twitter Bootstrap CSS Framework
-					The database is done in mysql with PHP as server scripting language.
+					We used the ever popular LAMP stack.
+					The crawling of the NITH orignal database was done by a node.js script.
+					The frontend/UI is mainly done with Twitter Bootstrap framework.
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -73,13 +71,14 @@
 		<div class="modal hide fade" id="my-modal3">
 			<div class="modal-header">
 				<button class="close" data-dismiss="modal">&times;</button>
-				<h1 class="text-center text-error">Work with me</h1>
+				<h1 class="text-center text-error">Work with us</h1>
 			</div>
 			<div class="modal-body lead">
 				<p>
-					There are always some ideas popping up in my head , but i don't have resources
-	        i.e. "A TEAM" to execute them . I have various projects to work on and they can't
-					be completed by myself. So if u want to work with me than you can
+					Do you have any idea or project in your mind that is super awesome.
+					We are currently working to create a NITH Event Portal 
+					Want to know more . Want to help us . Then we are just a mail away
+
 				</p>
 			</div>
 			<div class="modal-footer">
