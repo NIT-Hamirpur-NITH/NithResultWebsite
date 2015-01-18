@@ -212,15 +212,15 @@
 	<div class="span6 offset1">
 		<?php include_once "comment_box.php" ;?>
 	</div>
-	<div class="span2 offset6">
+	<div class="span2 offset2">
 		<?php
-			include_once "like_box.php";
+			include_once "view_box.php";
 		?>
 	</div>
 </div>
 
 <?php
-		
+
 	} else {
 //  we will finish it later
 ?>
@@ -243,9 +243,7 @@
 		showComment();
 		var addComment = document.getElementById("add_comment");
 		addComment.addEventListener("click", needToAddComment);
-		showLikes();
-    var addLikes = document.getElementById("add_like");
-    addLikes.addEventListener("click", needToAddLike);
+    addViews();
     $("#my-button").click(function(){
 			$("#my-modal").modal();
 		});

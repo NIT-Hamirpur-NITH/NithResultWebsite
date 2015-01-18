@@ -1,32 +1,22 @@
 <link rel="stylesheet" href="css/bootstrap.css" />
 <link rel="stylesheet" href="css/mycustom.css" />
 
-<div class="row">
-	<div class="span8 offset1">
-		<h3 class="text-info">Comments</h3 >
 
-	</div>
-</div>
+<h3 class="text-info">Comments</h3 >
 
 
 <div class="row">
-	<div class="span8 offset1" id="comment_box">
-	
-		<form class="form-inline">
-				
-			<input type="text" id="commenter" class="span7 form-search" name="from" placeholder="Name" required> </input></br>
-			<br/>
+	<div class="span8" id="comment_box">
+		<input type="text" id="commenter" class="span7 form-search" name="from" placeholder="Name" required> </input></br>
 			<textarea class="span7" id="comment" name="comment" cols="" rows="5" placeholder="Comment" required></textarea></br>
-			<br/>
-			<button class="btn btn-info" id="add_comment">Submit</button>
-		</form>
+			<button class="btn btn-info" id="add_comment">Submit</button> <br />
 	</div>
 </div>
+<br />
 <div class="row">
-	<div class="span8 offset1">
-		<div id="comments"></div>
-	</div>
+	<div class="span9" id="comments"> </div>
 </div>
+
 <script>
 
 	function showComment() {
@@ -35,7 +25,8 @@
 			"roll" : commentTo
 		}
 		$.post("fetch_comment.php", data, function(returnedData) {
-			var comments = document.getElementById("comments")
+			var comments = document.getElementById("comments");
+			comments.style.marginLeft = "0px";
 			comments.id = "comments";
 			comments.innerHTML = returnedData;
 		});

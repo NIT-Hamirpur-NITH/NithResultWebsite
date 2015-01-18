@@ -5,7 +5,7 @@
   $rollFor = $_POST["roll"];
   // check for the variables recieved
   if(isset($rollFor)) {
-    $query = "SELECT * FROM viewd where roll = $rollFor";
+    $query = "SELECT * FROM viewed where roll = $rollFor";
     $result = $conn->query($query) or die(mysql_error());
     if($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {

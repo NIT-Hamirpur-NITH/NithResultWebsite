@@ -74,7 +74,7 @@
 	<!-- result -->
 	<div class="span10 offset1">
 		<table class="table table-striped span10">
-	
+
 				<table class="table table-striped table-hover table-bordered">
 
 					<tr class="info">
@@ -102,7 +102,7 @@
 					<?php } ?>
 
 					<?php if($sem3 != -1) {	?>
-					<tr class="info"> 
+					<tr class="info">
 						<td>SGPI 3</td>
 						<td> <?php echo $sem3 ?></td>
 					</tr>
@@ -167,15 +167,15 @@
 	<div class="span6 offset1">
 		<?php include_once "comment_box.php" ;?>
 	</div>
-	<div class="span2 offset6">
+	<div class="span2 offset2">
 		<?php
-			include_once "like_box.php";
+			include_once "view_box.php";
 		?>
 	</div>
 </div>
 
 <?php
-		
+
 	} else {
 //  we will finish it later
 ?>
@@ -197,9 +197,7 @@
 		showComment();
 		var addComment = document.getElementById("add_comment");
 		addComment.addEventListener("click", needToAddComment);
-		showLikes();
-    var addLikes = document.getElementById("add_like");
-    addLikes.addEventListener("click", needToAddLike);
+		addViews();
     $("#my-button").click(function(){
 			$("#my-modal").modal();
 		});
