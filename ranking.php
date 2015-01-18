@@ -114,12 +114,11 @@
 	<div class="span3"><span class='rank'><?php echo "Class Rank ".$classRank ;?></span></div>
 	</div>
 </div>
-
+</br>
 <div class="row">
 	<!-- result -->
 	<div class="span10 offset1">
 		<table class="table table-striped span10">
-			<div class="container">
 				<table class="table table-striped table-hover table-bordered">
 
 					<tr class="info">
@@ -196,8 +195,11 @@
 					<?php } ?>
 
 				</table>
-			</div>
 		</table>
+	</div>
+	<div id="rightSide" class="span2 offset2">
+			</br>
+			<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fnithresult&amp;width=280&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=172911126103721" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:290px;" allowTransparency="true"></iframe>
 	</div>
 </div>
 
@@ -205,11 +207,12 @@
 <?php include_once "supply_box.php" ?>
 
 <div class="row">
-	<div class="span8 offset1">
-		<a href="main.php"><h3>GO BACK</h3></a>
-	</div>
+
 	<!-- like -->
-	<div class="span2">
+	<div class="span6 offset1">
+		<?php include_once "comment_box.php" ;?>
+	</div>
+	<div class="span2 offset6">
 		<?php
 			include_once "like_box.php";
 		?>
@@ -217,10 +220,8 @@
 </div>
 
 <?php
-			include_once "comment_box.php" ;
-		}
-		else {
-
+		
+	} else {
 //  we will finish it later
 ?>
 
