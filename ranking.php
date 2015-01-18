@@ -252,5 +252,16 @@
 		showLikes();
     var addLikes = document.getElementById("add_like");
     addLikes.addEventListener("click", needToAddLike);
+    $("#my-button").click(function(){
+			$("#my-modal").modal();
+		});
+		// about this
+		$("#my-button2").click(function(){
+			$("#my-modal2").modal();
+		});
+		// work with me
+		$("#my-button3").click(function(){
+			$("#my-modal3").modal();
+		});
 	}
 </script>

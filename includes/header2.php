@@ -2,8 +2,7 @@
 ?>
 
 <link rel="stylesheet" href="css/bootstrap.css" />
-<link rel="stylesheet" href="css/bootstrap-responsive.css" />
-<link rel="stylesheet" href="css/custom.css" />
+<link rel="stylesheet" href="css/mycustom.css" />
 
 
 <div class="row">
@@ -91,7 +90,7 @@
 </div>
 
 <!-- JavaScript -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jQuery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
 	// why this

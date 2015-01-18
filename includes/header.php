@@ -1,9 +1,6 @@
 <?php
 ?>
 
-<link rel="stylesheet" href="css/bootstrap.css" />
-<link rel="stylesheet" href="css/bootstrap-responsive.css" />
-<link rel="stylesheet" href="css/mycustom.css" />
 
 <div class="span10 offset1">
 	<div class="navbar">
@@ -94,31 +91,4 @@
 
 	</div>
 
-
-	<!-- JavaScript -->
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script type="text/javascript">
-		$("#my-button").click(function(){
-			$("#my-modal").modal();
-		});
-	</script>
-
-	<!-- JavaScript -->
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script type="text/javascript">
-		$("#my-button2").click(function(){
-			$("#my-modal2").modal();
-		});
-	</script>
-
-	<!-- JavaScript -->
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script type="text/javascript">
-		$("#my-button3").click(function(){
-			$("#my-modal3").modal();
-		});
-	</script>
 </div>
