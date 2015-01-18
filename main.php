@@ -1,39 +1,4 @@
 <!DOCTYPE html>
-<script>
-
-	// $(document).ready(function(){
-	// 	document.addEventListener("change",function(){
-	// 		document.forms[2][0].value
-	// 	})
-
-	// })
- 	function displayForm() {
- 		var x = document.forms[2][0].value;
- 		if (x == "class") {
- 			$('#yearForm').attr('style','display:none')
- 			$('#deptForm').attr('style','display:none');
-   	 		$('#yearForm').attr('style','display:block');
-        	$('#deptForm').attr('style','display:block');
-
-   		}
-      	if (x == "year") {
-      		$('#yearForm').attr('style','display:none')
- 			$('#deptForm').attr('style','display:none');
-   	 		$('#yearForm').attr('style','display:block');
-         }
-   	 	if (x == "branch") {
-   	 		$('#yearForm').attr('style','display:none')
- 			$('#deptForm').attr('style','display:none');
-         	$('#deptForm').attr('style','display:block');
-     	}
-     	if (x=="college"){
-     		$('#yearForm').attr('style','display:none')
- 			$('#deptForm').attr('style','display:none');
-     	}
-
-	}
-
-</script>
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -136,39 +101,38 @@
 							<label for="sel1" class="text-info">Ranking by:</label>
 							<select class="form-control" id="rankSort" name="rankSort" onchange ="displayForm()" required>
 								<option value="">Choose</option>
-							    <option value="class">Class</option>
-							    <option value="year">Year</option>
-							    <option value="college" >College</option>
-							  	<option value="branch">Branch</option>
+						    <option value="class">Class</option>
+						    <option value="year">Year</option>
+						    <option value="college" >College</option>
+						  	<option value="branch">Branch</option>
 							</select>
 						</div>
 
 						<div id = 'yearForm' style="display:none;" class="form-group">
-						<br>
+						<br />
 						<label class="text-info"for="sel1">Year: </label>
-							<select class="form-control" id="schemeName" name="scheme" >
-							    <option value="">Choose your year: </option>
-							    <option value=11>Final Year</option>
-							    <option value=12>Third Year</option>
-							    <option value=13>Second Year</option>
-							    <option value=14>First Year</option>
+							<select class="form-control" id="schemeRank" name="scheme">
+						    <option value="">Choose your year: </option>
+						    <option value=11>Final Year</option>
+						    <option value=12>Third Year</option>
+						    <option value=13>Second Year</option>
+						    <option value=14>First Year</option>
 							</select>
-						</br>
+						<br />
 						</div>
 
 						<div class="form-group" id = 'deptForm' style="display:none;" >
-							</br>
+							<br />
 							<label class="text-info" for="sel1"> Department : </label>
-							<select class="form-control" id="deptName" name="dept" >
-							  	    <option value="">Choose department</option>option>
-							    <option value="CED">Civil </option>
-							    <option value="MED">Mechanical</option>
-							    <option value="CSE">Computer Science</option>
-							    <option value="EEE">Electrical</option>
-							  	<option value="CHD">Chemical</option>
-							  	<option value="ARCH">Architecture</option>
-							  	<option value="EEE">Electronics & Comm.</option>
-							  	<option value ="ECE"> ECE </option>>
+							<select class="form-control" id="branchRank" name="dept">
+						  	<option value="">Choose department</option>option>
+						    <option value="CED">Civil</option>
+						    <option value="EEE">Electrical</option>
+						    <option value="MED">Mechanical</option>
+						    <option value="ECE">Electronics &amp; Communication</option>
+						    <option value="CSE">Computer Science</option>
+						    <option value="ARCH">Architecture</option>
+						  	<option value="CHD">Chemical</option>
 							</select>
 
 						</div>
@@ -216,6 +180,9 @@
 				var schemeName = document.getElementById("schemeName");
 				deptName.addEventListener('change', fetchName);
 				schemeName.addEventListener('change', fetchName);
+				var rankSort = document.getElementById('rankSort');
+				rankSort.addEventListener('change', displayForm);
+				displayForm();
 			}
 
 			function fetchName() {
@@ -233,6 +200,38 @@
 					console.log(returnedData);
 				});
 			}
+
+			function displayForm() {
+ 				var x = document.forms[2][0].value;
+ 				var schemeRank = document.getElementById('schemeRank');
+ 				var branchRank = document.getElementById('branchRank');
+ 				if (x == "class") {
+ 					schemeRank.setAttribute('required', true);
+ 					branchRank.setAttribute('required', true);
+ 					$('#yearForm').attr('style','display:none')
+ 					$('#deptForm').attr('style','display:none');
+   	 			$('#yearForm').attr('style','display:block');
+        	$('#deptForm').attr('style','display:block');
+				} else if (x == "year") {
+					schemeRank.setAttribute('required', true);
+ 					branchRank.removeAttribute('required');
+      		$('#yearForm').attr('style','display:none')
+ 					$('#deptForm').attr('style','display:none');
+   	 			$('#yearForm').attr('style','display:block');
+        } else if (x == "branch") {
+        	schemeRank.removeAttribute('required');
+ 					branchRank.setAttribute('required', true);
+   	 			$('#yearForm').attr('style','display:none')
+ 					$('#deptForm').attr('style','display:none');
+        	$('#deptForm').attr('style','display:block');
+     		} else {
+     			branchRank.removeAttribute('required');
+     			schemeRank.removeAttribute('required');
+     			$('#yearForm').attr('style','display:none')
+ 					$('#deptForm').attr('style','display:none');
+     		}
+     	}
+
 		</script>
 
 	</body>
