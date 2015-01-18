@@ -17,6 +17,7 @@
 </div>
 
 <script>
+
 	function showComment() {
 		var commentTo = document.getElementById("comment_to").textContent.trim();
 		var data = {
