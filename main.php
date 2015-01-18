@@ -18,9 +18,9 @@
 	?>
 
 	<!-- The links  -->
-	<div class="row">
+	<div >
 		<?php
-			include_once "includes/header.php" ;
+			include_once "includes/header2.php" ;
 		?>
 	</div>
 
@@ -28,13 +28,13 @@
 
 		<div class="span9 offset1">
 
-			<div class="container span9 list-group-item-success" style="color:#777; font-family:Lobster, cursive; padding: 20px; border-radius: 5px;
-			 box-shadow:1px 1px 2px black; font-size:15px; margin-bottom:20px; text-align:justify; background:#EFF2EF;">
+			<div class="container span9 list-group-item-success" style="color:black; font-family:, cursive; padding: 20px; border-radius: 5px;
+			 box-shadow:1px 1px 2px black; font-size:15px; margin-bottom:40px; text-align:justify; background:#EFF2EF;">
 				A more interactive result. Find result easiy by name, roll number as well as ranking.
 				With comment and like feature on everyones result page.
 				Check out your result again!
 			</div>
-
+			<br/><br/>
 			<!-- Search by name -->
 			<form class="well form-search span9" style="margin-left:0px" action="name.php" method="POST">
 				<!-- <input type = "text" name="scheme" id="schemeName" />
