@@ -61,26 +61,6 @@
 //  we gonna finish the rest at the end
 ?>
 
-<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<style>
-
-.rank {
-	font-size:20px;
-	font-family : Open Sans;
-	padding:5px;
-	position: relative;
-	display: block;
-	width:90%;
-	text-align:center;
-	border-radius: 5px;
-	box-shadow:1px 1px 2px black;
-	background:#EFF2EF;
-	color:#777;
-	font-family:Lobster, cursive;
-}
-
-</style>
-
 <div class="row">
 	<div class="span10 offset1">
 	<div class="span3"><span class='rank'><?php echo "College Rank ".$collegeRank ;?></span></div>
@@ -97,74 +77,74 @@
 				<table class="table table-striped table-hover table-bordered">
 
 					<tr>
-						<td> NAME</td>
+						<td> Name</td>
 						<td> <?php echo $name ?></td>
 					</tr>
 
 					<tr>
-						<td>ROLLNO</td>
+						<td>Roll Number</td>
 						<td id="comment_to"> <?php echo $rollNo ?></td>
 					</tr>
 
 					<?php if($sem1 != -1) {	?>
 					<tr>
-						<td>Sem 1 (SGPI01)</td>
+						<td>Semester 1 (SGPI01)</td>
 						<td> <?php echo $sem1 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem2 != -1) {	?>
 					<tr>
-						<td>Sem 2 (SGPI02)</td>
+						<td>Semester 2 (SGPI02)</td>
 						<td> <?php echo $sem2 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem3 != -1) {	?>
 					<tr>
-						<td>Sem 3 (SGPI03)</td>
+						<td>Semester 3 (SGPI03)</td>
 						<td> <?php echo $sem3 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem4 != -1) {	?>
 					<tr>
-						<td>Sem 4 (SGPI04)</td>
+						<td>Semester 4 (SGPI04)</td>
 						<td> <?php echo $sem4 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem4 != -1) {	?>
 					<tr>
-						<td>Sem 4 (SGPI04)</td>
+						<td>Semester 4 (SGPI04)</td>
 						<td> <?php echo $sem4 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem5 != -1) {	?>
 					<tr>
-						<td>Sem 5 (SGPI05)</td>
+						<td>Semester 5 (SGPI05)</td>
 						<td> <?php echo $sem5 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem6 != -1) {	?>
 					<tr>
-						<td>Sem 6 (SGPI06)</td>
+						<td>Semester 6 (SGPI06)</td>
 						<td> <?php echo $sem6 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem7 != -1) {	?>
 					<tr>
-						<td>Sem 7 (SGPI07)</td>
+						<td>Semester 7 (SGPI07)</td>
 						<td> <?php echo $sem7 ?></td>
 					</tr>
 					<?php } ?>
 
 					<?php if($sem8 != -1) {	?>
 					<tr>
-						<td>Sem 8 (SGPI08)</td>
+						<td>Semester 8 (SGPI08)</td>
 						<td> <?php echo $sem8 ?></td>
 					</tr>
 					<?php } ?>
@@ -181,6 +161,7 @@
 		</table>
 	</div>
 </div>
+
 
 <?php include_once "supply_box.php" ?>
 
