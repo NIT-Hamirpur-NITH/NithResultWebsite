@@ -160,13 +160,6 @@
 					</tr>
 					<?php } ?>
 
-					<?php if($sem4 != -1) {	?>
-					<tr>
-						<td>Semester 4 (SGPI04)</td>
-						<td> <?php echo $sem4 ?></td>
-					</tr>
-					<?php } ?>
-
 					<?php if($sem5 != -1) {	?>
 					<tr>
 						<td>Semester 5 (SGPI05)</td>
