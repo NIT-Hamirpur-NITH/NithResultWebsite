@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>CSE 2012 BATCH RESULT REDEFINED!!</title>
+	<title>NITH RESULT REDEFINED!!</title>
 
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,7 +26,7 @@
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
 				<div class="container">
-					<h1 class="text-info">NITH RESULT PORTAL++</h1>
+					<h1 class="text-info">NITH RESULT PORTAL UPGRADED</h1>
 				</div>
 			</div>
 		</div>
@@ -50,8 +50,7 @@
 					<div class="row ">
 						<div class="span4 offset4 ">
 							<h1 class="text-comp">COMPUTER SCIENCE RESULT</h1>
-							<p>Only for 2K16 Batch..</br></br></br>
-							  <a class="btn btn-large btn-primary" href="main.php">Check it here</a>
+							 <a class="btn btn-large btn-primary" href="main.php">Check it here</a>
 							</p>
 					  </div>
 					</div>
@@ -64,8 +63,8 @@
 					<div class="row ">
 						<div class="span4 offset3 ">
 							<h1 class="text-my">ELECRONICS AND COMMUNICATION RESULT</h1>
-							<p>Only for 2K16 Batch..</br></br></br>
-								<a class="btn btn-large btn-danger" href="#" data-toggle="popover" title="Coming Soon..." data-content="The database for this branch is not yet ready . As I am working alone it would take sometime to get it ready .You can help me with this work and other projects too , just click on the contact button." data-placement="bottom">Check it here</a>
+								</br></br>
+								<a class="btn btn-large btn-primary" href="main.php">Check it here</a>
 							</p>
 						</div>
 					</div>
@@ -78,8 +77,8 @@
 					<div class="row ">
 						<div class="span4 offset2 ">
 							<h1 class="text-error">CIVIL ENGG. RESULT</h1>
-							<p>Only for 2K16 Batch..</br></br></br>
-								<a class="btn btn-large btn-primary" href="#" data-toggle="popover" title="Coming Soon..." data-content="The database for this branch is not yet ready . As I am working alone it would take sometime to get it ready .You can help me with this work and other projects too , just click on the contact button." data-placement="right">Check it here</a>
+							</br></br>
+								<a class="btn btn-large btn-primary" href="main.php">Check it here</a>
 							</p>
 						</div>
 					</div>
@@ -92,8 +91,8 @@
 					<div class="row ">
 						<div class="span4 offset3 ">
 							<h1 class="text-mech">MECHANICAL ENGG. RESULT</h1>
-							<p>Only for 2K16 Batch..</br></br></br>
-								<a class="btn btn-large btn-success" href="#" data-toggle="popover" title="Coming Soon..." data-content="The database for this branch is not yet ready . As I am working alone it would take sometime to get it ready .You can help me with this work and other projects too , just click on the contact button." data-placement="right">Check it here</a>
+							</br></br>
+								<a class="btn btn-large btn-primary" href="main.php">Check it here</a>
 							</p>
 						</div>
 					</div>
@@ -106,8 +105,8 @@
 					<div class="row ">
 						<div class="span4 offset3 ">
 							<h1 class="text-my">ELECTRICAL ENGG. RESULT</h1>
-								<p class="text-info">Only for 2K16 Batch..</br></br></br>
-									<a class="btn btn-large " href="#" data-toggle="popover" title="Coming Soon..." data-content="The database for this branch is not yet ready . As I am working alone it would take sometime to get it ready .You can help me with this work and other projects too , just click on the contact button." data-placement="right">Check it here</a>
+								</br></br>
+									<a class="btn btn-large btn-primary" href="main.php">Check it here</a>
 								</p>
 						</div>
 					</div>
