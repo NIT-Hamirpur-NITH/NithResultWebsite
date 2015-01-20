@@ -1,5 +1,5 @@
 <br />
-<button class="btn btn-info " id="add_like"> Views <span id="views"></span></button>
+<h4 class="text-info" id="add_like">Your Result Views -<span id="views"></span></h4>
 
 <script>
   function showViews() {
