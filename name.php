@@ -167,7 +167,7 @@
 	<div class="span6 offset1">
 		<?php include_once "comment_box.php" ;?>
 	</div>
-	<div class="span2 offset2">
+	<div class="span5 offset1">
 		<?php
 			include_once "view_box.php";
 		?>
