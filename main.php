@@ -4,6 +4,41 @@
 <head>
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/mycustom.css" />
+	<script>
+		function displayForm() {
+			var x = document.forms[2][0].value;
+			var schemeRank = document.getElementById('schemeRank');
+			var branchRank = document.getElementById('branchRank');
+			if (x == "class") {
+				schemeRank.setAttribute('required', true);
+				branchRank.setAttribute('required', true);
+				$('#yearForm').attr('style','display:none')
+				$('#deptForm').attr('style','display:none');
+	 				$('#yearForm').attr('style','display:block');
+		      	$('#deptForm').attr('style','display:block');
+			}
+			else if (x == "year") {
+				schemeRank.setAttribute('required', true);
+				branchRank.removeAttribute('required');
+		    	$('#yearForm').attr('style','display:none')
+				$('#deptForm').attr('style','display:none');
+		 	 	$('#yearForm').attr('style','display:block');
+		     }
+		     else if (x == "branch") {
+		      	schemeRank.removeAttribute('required');
+				branchRank.setAttribute('required', true);
+		 	 	$('#yearForm').attr('style','display:none')
+				$('#deptForm').attr('style','display:none');
+		      	$('#deptForm').attr('style','display:block');
+	   		}
+	   		else {
+	   			branchRank.removeAttribute('required');
+	   			schemeRank.removeAttribute('required');
+	   			$('#yearForm').attr('style','display:none')
+					$('#deptForm').attr('style','display:none');
+		   	}
+		  }
+	</script>
 </head>
 
 <body>
@@ -197,40 +232,6 @@
 				nameList.innerHTML = returnedData;
 			});
 		}
-
-		function displayForm() {
-				var x = document.forms[2][0].value;
-				var schemeRank = document.getElementById('schemeRank');
-				var branchRank = document.getElementById('branchRank');
-				if (x == "class") {
-					schemeRank.setAttribute('required', true);
-					branchRank.setAttribute('required', true);
-					$('#yearForm').attr('style','display:none')
-					$('#deptForm').attr('style','display:none');
- 	 				$('#yearForm').attr('style','display:block');
-			      	$('#deptForm').attr('style','display:block');
-				}
-				else if (x == "year") {
-					schemeRank.setAttribute('required', true);
-					branchRank.removeAttribute('required');
-			    	$('#yearForm').attr('style','display:none')
-					$('#deptForm').attr('style','display:none');
-			 	 	$('#yearForm').attr('style','display:block');
-			     }
-			     else if (x == "branch") {
-			      	schemeRank.removeAttribute('required');
-					branchRank.setAttribute('required', true);
-			 	 	$('#yearForm').attr('style','display:none')
-					$('#deptForm').attr('style','display:none');
-			      	$('#deptForm').attr('style','display:block');
-		   		}
-		   		else {
-		   			branchRank.removeAttribute('required');
-		   			schemeRank.removeAttribute('required');
-		   			$('#yearForm').attr('style','display:none')
-					$('#deptForm').attr('style','display:none');
-			   		}
-			   	}
 
 	</script>
 
