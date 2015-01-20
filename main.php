@@ -144,7 +144,7 @@
 	</div>
 
 	<div class="row" style="background: #999999; margin-top:20px;">
-		<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE</h5>
+		<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE || Hits : <span id= "hitSpan"></span> </h5>
 	</div>
 
 	<script src="js/jQuery.js"></script>
@@ -171,7 +171,17 @@
 			$("#my-button3").click(function(){
 				$("#my-modal3").modal();
 			});
+			// increase the hit count and show that
+			hitler();
 		};
+
+		function hitler() {
+			var hitSpan = document.getElementById('hitSpan');
+			$.post('hits.php', {}, function(data) {
+				console.log(data);
+				hitSpan.innerHTML = data;
+			});
+		}
 
 		function fetchName() {
 			console.log('fetching names');
@@ -199,21 +209,21 @@
 					$('#deptForm').attr('style','display:none');
  	 				$('#yearForm').attr('style','display:block');
 			      	$('#deptForm').attr('style','display:block');
-				} 
+				}
 				else if (x == "year") {
 					schemeRank.setAttribute('required', true);
 					branchRank.removeAttribute('required');
 			    	$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
 			 	 	$('#yearForm').attr('style','display:block');
-			     } 
+			     }
 			     else if (x == "branch") {
 			      	schemeRank.removeAttribute('required');
 					branchRank.setAttribute('required', true);
 			 	 	$('#yearForm').attr('style','display:none')
 					$('#deptForm').attr('style','display:none');
 			      	$('#deptForm').attr('style','display:block');
-		   		} 
+		   		}
 		   		else {
 		   			branchRank.removeAttribute('required');
 		   			schemeRank.removeAttribute('required');

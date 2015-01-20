@@ -192,7 +192,7 @@
 ?>
 
 <div class="row" style="background: #999999; margin-top:20px;">
-	<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE</h5>
+	<h5 class="text-center">No Rights Reserved</br>@OPEN-SOURCE || Hits : <span id= "hitSpan"></span> </h5>
 </div>
 
 <script type="text/javascript">
@@ -200,7 +200,7 @@
 		showComment();
 		var addComment = document.getElementById("add_comment");
 		addComment.addEventListener("click", needToAddComment);
-    addViews();
+		addViews();
     $("#my-button").click(function(){
 			$("#my-modal").modal();
 		});
@@ -211,6 +211,14 @@
 		// work with me
 		$("#my-button3").click(function(){
 			$("#my-modal3").modal();
+		});
+		hitler();
+	};
+
+	function hitler() {
+		var hitSpan = document.getElementById('hitSpan');
+		$.post('hits.php', {}, function(data) {
+			hitSpan.innerHTML = data;
 		});
 	}
 </script>
