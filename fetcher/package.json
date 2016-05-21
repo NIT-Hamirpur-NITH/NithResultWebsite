@@ -1,0 +1,25 @@
+{
+  "name": "result-fetch",
+  "version": "0.0.1",
+  "description": "Fetches result from the nith website and saves in a db",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fetch",
+    "cheerio",
+    "async"
+  ],
+  "author": "Sagar Karira, Akshendra Pratap Singh",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "cheerio": "^0.20.0",
+    "colors": "^1.1.2",
+    "form-data": "^0.2.0",
+    "node-mysql": "^0.4.2",
+    "querystring": "^0.2.0",
+    "request": "^2.69.0"
+  }
+}
